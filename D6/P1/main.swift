@@ -1,10 +1,5 @@
 import Foundation
 
-func StringToSet (_ input: String) -> Set<Character>
-{
-  return Set(Array(input))
-}
-
 func CalculateGroupYesAnswers(_ groupAnswers: String) -> Int
 {
   let groupPersonAnswers = (groupAnswers.split(separator: "\n").map { String($0) }).map { Set(Array($0)) }
