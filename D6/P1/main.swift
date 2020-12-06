@@ -16,14 +16,7 @@ func CalculateGroupYesAnswers(_ groupAnswers: String) -> Int
 
 func SumOfCounts(_ arrayOfGroups: [String]) -> Int
 {
-  var sum = 0
-
-  for group in arrayOfGroups
-  {
-    sum += CalculateGroupYesAnswers(group)
-  }
-
-  return sum
+  return (arrayOfGroups.map { CalculateGroupYesAnswers($0) }).reduce(0, +)
 }
 
 let path = Bundle.main.path(forResource: "input", ofType: "txt")
